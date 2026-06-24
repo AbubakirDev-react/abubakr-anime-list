@@ -7,6 +7,7 @@ import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import AuthProvider, { useAuth } from './context/AuthContext';
 import AuthenticatedError from './pages/AuthenticatedError';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   const {currentUser} = useAuth();
@@ -14,9 +15,10 @@ function App() {
     <div>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<HomePage />} />
+        <Route path='/' element={currentUser?<HomePage/>:<HeroPage />} />
         <Route path='/login' element={currentUser?<AuthenticatedError/>:<LoginPage />}/>
         <Route path='/register' element={currentUser?<AuthenticatedError/>:<RegisterPage />} />
+        <Route path='/profile' element={currentUser?<ProfilePage />:<LoginPage/>} />
       </Routes>
     </div>
     )

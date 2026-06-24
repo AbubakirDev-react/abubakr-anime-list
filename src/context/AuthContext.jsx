@@ -1,4 +1,5 @@
 import { createContext, Children, useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const AuthContext = createContext(null);
@@ -12,6 +13,7 @@ export default function AuthProvider({children}){
             return []
         }
     })
+    const navigate=useNavigate('');
     const [err,setErr]=useState(null);
     useEffect(()=>{
         const email=JSON.parse(localStorage.getItem('currentEmail'))
@@ -44,8 +46,25 @@ export default function AuthProvider({children}){
             localStorage.setItem('currentEmail',JSON.stringify(email))
          }
     }
+    function login(email,password){
+        const foundUser = users.find(u=>u.email===email)
+        if(!foundUser){
+            setErr('Такая почта не существует!')
+        }
+        if(foundUser.email===email && foundUser.pwd===password){
+            setCurrentUser(foundUser)
+            localStorage.setItem('currentEmail',JSON.stringify(email))
+            navigate('/profile')
+        } else {
+            setErr('Почта или Пароль неправильный!')
+        }
+    }
+    function logout(){
+        setCurrentUser(null)
+        localStorage.removeItem('currentEmail')
+    }
     return (
-        <AuthContext.Provider value={{ signup,err,currentUser }}>
+        <AuthContext.Provider value={{ signup,err,currentUser,login,logout }}>
             {children}
         </AuthContext.Provider>
     )
