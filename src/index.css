@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+:root{
+    /* Variant 3 (Solo Leveling) */
+    --bg: #111827;
+    --card: #1F2937;
+    --primary: #7C3AED;
+    --accent: #A855F7;
+    --text: #F9FAFB;
+}
+body{
+    background: var(--bg);
+    color: var(--text);
+}
+.card{
+    background: var(--card);
+}
+.btn{
+    background: var(--accent);
+    color: var(--text);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.btn:active{
+    opacity: 0.6;
+}
+.err{
+    color: var(--accent);
+}
