@@ -50,10 +50,12 @@ export default function AuthProvider({children}){
         const foundUser = users.find(u=>u.email===email)
         if(!foundUser){
             setErr('Такая почта не существует!')
+            return
         }
         if(foundUser.email===email && foundUser.pwd===password){
             setCurrentUser(foundUser)
             localStorage.setItem('currentEmail',JSON.stringify(email))
+            setErr(null)
             navigate('/profile')
         } else {
             setErr('Почта или Пароль неправильный!')
