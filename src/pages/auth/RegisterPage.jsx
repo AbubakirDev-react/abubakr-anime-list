@@ -13,7 +13,7 @@ export default function LoginPage() {
         signup(fullname,email,password)
     }
   return (
-    <div className='w-full h-screen flex flex-col items-center justify-center'>
+    <div className='w-full max-h-full min-h-10/12 flex flex-col items-center justify-center'>
        <div className="card w-1/4 p-5 rounded-2xl">
         <h1 className='text-xl text-center my-2'>Создать учетный запись</h1>
         <form className='w-full' onSubmit={SubmitHandle}>

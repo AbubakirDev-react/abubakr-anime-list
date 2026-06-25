@@ -14,7 +14,7 @@ export default function Navbar() {
             <Link to='profile/' className='text-white/60 duration-300 hover:text-white'>Профиль</Link>
         </ul>
         {currentUser?
-        <p>Welcome, {currentUser.fname}</p>:
+        <Link to='/add-anime' className='btn rounded px-3 py-1.5'>Добавить</Link>:
         <Link to='/login' className='btn rounded px-3 py-1.5'>Войти</Link>  
       }
       </nav>
