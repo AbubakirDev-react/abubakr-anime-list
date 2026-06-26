@@ -1,18 +1,120 @@
-# React + Vite
+# 🎌 AnimeTrack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple anime tracker built with **React**. Users can create an account, log in, and manage their personal anime watch list using Local Storage.
 
-Currently, two official plugins are available:
+> 🚀 This project was created to improve my React skills by practicing Context API, React Router, authentication logic, and state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+* 🔐 Authentication (Sign Up / Login / Logout)
+* 👤 Protected routes
+* 🎬 Add anime to your personal list
+* 💾 Data persistence with Local Storage
+* 📱 Responsive UI
+* ⚠️ Form validation
+* 🚪 User session persistence after page refresh
+* 📂 Context API for global state management
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* React Router
+* Context API
+* JavaScript (ES6+)
+* CSS
+* Local Storage
+* Vite
+
+---
+
+## 📸 Project Status
+
+Current version: **v1.0**
+
+### Completed
+
+* User authentication
+* Route protection
+* Add anime
+* Local Storage integration
+* Responsive interface
+
+### Planned (v2)
+
+* Edit anime
+* Delete anime
+* Search
+* Filter
+* Progress tracking
+* Better statistics
+* Improved UI/UX
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+---
+
+## 🎯 What I Learned
+
+This project helped me practice:
+
+* Context API
+* Authentication flow
+* Protected routes
+* React state management
+* Local Storage
+* Component organization
+* Building a complete React project from scratch
+
+---
+
+## 📌 Future Improvements
+
+* Backend integration (Django REST Framework)
+* Database support
+* Real Anime API integration
+* User profiles
+* Cloud data synchronization
+
+---
+
+## 🌐 Live Demo
+
+https://abubakr-anime-list.vercel.app
+
+---
+
+## 👨‍💻 Author
+
+**Abubakir**
+
+GitHub: https://github.com/AbubakirDev-react
